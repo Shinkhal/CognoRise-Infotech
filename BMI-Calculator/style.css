@@ -1,0 +1,108 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    background-color: darkslategrey;
+}
+
+.container {
+    flex: 1;
+}
+
+footer {
+    background-color: #343a40;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    width: 100%;
+}
+
+
+h1 {
+    margin-bottom: 20px;
+    color: whitesmoke;
+}
+
+.card {
+    max-width: 500px;
+    max-height: max-content;
+    margin: 0 auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Animate the header on page load */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h1 {
+    animation: fadeInDown 1s ease-out;
+}
+
+/* Button hover effect */
+button {
+    transition: transform 0.3s ease;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+/* Animate BMI result display */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#bmi-result, #bmi-category {
+    animation: fadeInUp 0.5s ease-out;
+}
+
+/* Animate the footer on page load */
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+footer {
+    animation: slideInUp 1s ease-out;
+}
+/* Common styles for BMI result */
+#bmi-result, #bmi-category {
+    font-size: 24px;
+    font-weight: bold;
+    animation: fadeInUp 0.5s ease-out;
+}
+
+/* Specific colors for BMI categories */
+.bmi-normal {
+    color: green;
+}
+
+.bmi-overweight {
+    color: red;
+}
+
+.bmi-underweight {
+    color: orange; /* You can decide the color */
+}
